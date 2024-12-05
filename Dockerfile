@@ -15,7 +15,6 @@ RUN pip install -r requirements.txt
 
 # Expose Streamlit's default port
 #EXPOSE 8502
-
 # Run Streamlit app on container startup
 #CMD ["streamlit", "run", "app.py", "--server.enableCORS", "false", "--server.address", "0.0.0.0", "--server.port", "8502"]
 CMD [ "streamlit", "run","--server.enableCORS","false","app.py" ]
