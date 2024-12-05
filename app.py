@@ -11,7 +11,6 @@ from io import BytesIO
 st.title("Location Image Classifier")
 st.text("Provide URL of Location Image for image classification")
 
-@st.cache_data
 def load_model():
   model = tf.keras.models.load_model('./models/model.h5')
   return model
@@ -27,7 +26,7 @@ def decode_img(image):
   img = tf.image.resize(img,[150,150])
   return np.expand_dims(img, axis=0)
 
-# path = st.text_input('Enter Image URL to Classify.. ','https://rewildingeurope.com/wp-content/uploads/2021/11/RS1765_SBA_2011-07-30_070027-low-1202x800.jpg')
+path = st.text_input('Enter Image URL to Classify.. ','https://rewildingeurope.com/wp-content/uploads/2021/11/RS1765_SBA_2011-07-30_070027-low-1202x800.jpg')
 if path is not None:
     content = requests.get(path).content
 
