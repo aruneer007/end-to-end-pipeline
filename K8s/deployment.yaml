@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: cv-app
-        image: gcr.io/gcpmigration-415862/myapp:v1
+        image: gcr.io/myproject-415862/myapp:v1
         ports:
         - containerPort: 8501
