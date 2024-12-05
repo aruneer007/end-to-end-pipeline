@@ -12,7 +12,7 @@ st.title("Location Image Classifier")
 st.text("Provide URL of Location Image for image classification")
 
 def load_model():
-  model = tf.keras.models.load_model('./models/model.h5')
+  # model = tf.keras.models.load_model('./models/model.h5')
   return model
 
 with st.spinner('Loading Model Into Memory....'):
