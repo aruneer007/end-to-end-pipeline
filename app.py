@@ -21,6 +21,7 @@ with st.spinner('Loading Model Into Memory....'):
 
 classes = ['buildings', 'forest', 'glacier', 'mountain', 'sea', 'street']
 
+
 def decode_img(image):
   img = tf.image.decode_jpeg(image, channels=3)  
   img = tf.image.resize(img,[150,150])
